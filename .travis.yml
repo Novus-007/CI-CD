@@ -1,3 +1,10 @@
+
+  
+env:
+  global:
+    - CC_TEST_REPORTER_ID=ca2e2153c95d54b45acf92dc766b6722c2cfd1371e5500f8c7d58d2b753f857a
+    - email=`git log -1 --pretty=format:'%ae'`
+    
 language: python
 python:
   - "3.5"
@@ -5,24 +12,52 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install coverage==4.3
-  - pip install codeclimate-test-reporter
-  - pip install xlrd
   - pip install pandas
+  - pip install xlrd
+  - pip install codeclimate-test-reporter
 
 
 script:
-  - echo $CC_TEST_REPORTER_ID
   - export PYTHONPATH=$PYTHONPATH:$(pwd)
   - pwd
   - cd Function
   - python Run_Pipline.py
   - bash Running_Function.sh
+  - python CoverageCombine.py
+  - bash Coverage_Function.sh
   - cd ..
+
+
 
 git:
   depth: 2
   
+branches:
+  only:
+   - gh-pages
+after_success:
+#    - coveralls
+#    - codecov
+    
 
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: gh-pages
+    condition: $email != deploy@travis-ci.org
+    
+after_failure:
+  - echo problem
+
+after_deploy:
+  - git push origin master
+
+
+    
 notifications:
   email:
     recipients:
