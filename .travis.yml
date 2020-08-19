@@ -18,6 +18,7 @@ script:
   - python Run_Pipline.py
   - bash Running_Function.sh
   - cd ..
+  - echo "Done"
 
 git:
   depth: 2
