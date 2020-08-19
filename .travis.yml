@@ -45,7 +45,7 @@ after_success:
 deploy:
   provider: pages
   skip_cleanup: true
-  deploy_key: $GITHUB_TOKEN
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: gh-pages
