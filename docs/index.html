@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.png" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" target="_blank" href="https://github.com/Novus-007/CI-CD">GIT</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Setup">Setup</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Working">Working</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project">Project</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+ <header class="masthead">
+
+        </header>
+
+<div style="padding: 50px">
+<h2 style="font-family: Arial, Helvetica, sans-serif;font-size: 40px;"> CI/CD: Testing made easy</h2>
+<h2 style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"> Introduction</h2>
+
+<div style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;" >
+The continuous methodologies of software development are based on automating the execution of scripts to minimize the chance of introducing errors while developing applications. They require less human intervention or even no intervention at all, from the development of new code until its deployment.
+<br>
+<br>
+Many software companies are using this for development and integration of there platform. And one of the most famous open source tool used is <b>Travis CI</b>. It's used in many opensource packages and projects as well.
+<br>
+<br>
+This is a small tool building the <b>CI/CD framework</b> for a small scale project. It's is build such that no knowledge of any tool or CI/CD concept is required. It can be used across project in your <b>GIT Repository</b>.
+<h2 style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"> Goal of the tool</h2>
+<p>
+  Mainly  the tool automatically checks for code quality and static code check. A coverage report is generated if test cases are written in python unit-test.  All the report and check is been deployed back in the <b>gh-branch</b> of the GIT.
+</p>
+<h2 style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"> Specific Requirement Performed By The Tool  </h2>
+
+<ol>
+	<li>When Code is  pushed to Github it should execute and produce the following reports
+
+		<ol>
+			<li><b>Coverage Report</b></li>
+			<li><b>Code Quality</b></li>
+			<li><b>Code Spell</b></li>
+			<li><b>Duplication</b></li>
+			<li><b>Detect Dead Code</b></li>
+		</ol>
+	</li>
+	<li>All the reports should be generated in the branch in GIT. So that the master commit can be cleaner and don’t have multiple unnecessary commits.</li>
+	<li>All the changes should automatically reflect without changing any configuration.</li>
+	<li>In the Master branch in GIT, it should only build and check if it’s working. The maintainer of the GIT repository will have to check the essential and final commits in the branch and merge it with the master as per the requirement.
+	</li>
+</ol>
+<h2  style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"> Tools Used To Build The Requirement</h2>
+<br>
+<table>
+	<tr>
+		<td> 1.</td>
+		<td> <img src="Img/TravisCI-Full-Color.png" width="80" height="30" ></td>
+		<td> <img src="Img/passing.svg"> </td>
+	</tr>
+
+	<tr>
+		<td> 2.</td>
+		<td> <img src="Img/CodeClimate.png" width="50" height="50"></td>
+		<td> <img src="Img/Code_Climate1.svg" > </td>
+	</tr>
+	<tr>
+		<td> 3.</td>
+		<td> <img src="Img/gitpod.png" width="100" height="30" ></td>
+		<td> <img src="Img/gitpod1.svg"> </td>
+	</tr>
+</table>
+<br>
+<h2 style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"> How To Setup The System</h2>
+First have to follow the following folder structure in there respective branches as shown below.
+<img src="Img/Structure.png">
+<br>
+You can download the code for each of the branch for respective git branches from the link provided. And place it as per the folder Structure.
+<ol>
+	<li>master  <a href="https://github.com/ganeshb15/Tools/tree/master/PythonOnlineSetup/Master">Link</a> </li>
+	<li>gh-pages <a href="https://github.com/ganeshb15/Tools/tree/master/PythonOnlineSetup/Branch">Link</a></li>
+</ol>
+<h2 id="Setup" style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"> Setting Up The Token</h2>
+<br>
+Copy the token from GIT by following the below process.
+<br>
+</div>
+</div>
+
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot1.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+1.Go to selecting by clicking on the blue rectangle.
+
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot2.png" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+2. Click on the blue rectangle on "Developer settings"
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot3.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+   3. Click on the blue rectangle on "Personal access tokens"
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot4.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 4. Click on the blue rectangle on "Generate new token"
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot5.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+5. Give a suitable name in the “Note” section. And also tick all the below section according to the access needs.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot6.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 6. Click on the blue rectangle on "Generate token"
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="screenshot7.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+7. Copy the token
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+<br>
+<div style="padding: 50px">
+<div style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;" >
+  Follow the below setps in the <b>Travis CI</b>. And past the token in the last step which was copied in GIT.
+</div>
+</div>
+
+<br>
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_1.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+1.Go to "More options" by clicking on the blue rectangle.
+
+  </div>
+</div>
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_2.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 2. Go to "Selecting" by clicking on the blue rectangle.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_3.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+   3. Scroll down.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_4.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 4. Write "GITHUB_TOKEN" in the blue rectangle.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_5.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+5.Past the Token copied from GIT here.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_6.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 6. Click on the blue rectangle on "Add". To "Add" the token.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides12">
+  <img src="screenshot1_7.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 7. Similarly copy the token from the code-climate in the variable “CC_TEST_REPORTER_ID”.
+
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs1(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs1(1)">&#10095;</button>
+
+</div>
+
+<div style="padding: 50px">
+<div style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;" >
+  Follow the steps below in <b>CodeClimate</b>.
+</div>
+</div>
+<br>
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides13">
+  <img src="screenshot2_1.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+1.Go to "Repo Selecting" by clicking on the blue rectangle.
+
+  </div>
+</div>
+
+<div class="w3-display-container mySlides13">
+  <img src="screenshot2_2.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+ 2. Go to "Test coverage" by clicking on the blue rectangle.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides13">
+  <img src="screenshot2_3.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+   3. Copy a token and pass it in GIT as shown above.
+  </div>
+</div>
+
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs2(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs2(1)">&#10095;</button>
+
+</div>
+
+
+<br>
+<br>
+<div style="padding: 50px">
+
+<h2 id="Working" style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;">How To Use It</h2>
+</div>
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot1.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    1.Select the Branch  Folder. Change in the blue rectangle area.
+
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot2.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    2.Select the Function Folder.Click in the blue rectangle area.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot3.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    3.Create the folder of the file name you want. According to the naming convention.In this sample we are using DIAEngineAnalysis.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot4.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    4.Go to Running_Pipline.csv.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot5.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    5.Click on edit. [Click on the blue rectangle area]
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot6.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    6.Add the folder name in the CSV. In this sample it is DIAEngineAnalysis
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot7.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    7.Commit the changes.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot8.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    8.Go to Travis CI by clicking on the blue box.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot9.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    9.Check the output in the "Job Log " in Travis CI .
+
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot10.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    10.Check the output in the "Job Log " in Travis CI .
+
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot11.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+11.Check the error in the code if any.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides14">
+  <img src="Img/Run/screenshot12.png" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    12.You can check your coverage report in this folder in "index.html".
+  </div>
+</div>
+
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs3(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs3(1)">&#10095;</button>
+
+</div>
+<br>
+<br>
+<div style="padding: 50px">
+
+<h2 id="Project" style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;">Existing project with  that frame work.
+</h2>
+<div style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;" >
+<a href="https://github.com/prithvisekhar/VehicalDiagnosticAlgo">  VehicalDiagnosticAlgo </a>. This is one project which has this framework
+
+</div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex,"mySlides");
+showDivs(slideIndex,"mySlides12");
+showDivs(slideIndex,"mySlides13");
+showDivs(slideIndex,"mySlides14");
+
+
+
+function plusDivs3(n) {
+  showDivs(slideIndex += n,"mySlides14");
+}
+function plusDivs2(n) {
+  showDivs(slideIndex += n,"mySlides13");
+}
+
+function plusDivs1(n) {
+  showDivs(slideIndex += n,"mySlides12");
+}
+
+function plusDivs(n) {
+  showDivs(slideIndex += n,"mySlides");
+}
+
+function showDivs(n,st) {
+  var i;
+  var x = document.getElementsByClassName(st);
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+</body>
