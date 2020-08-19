@@ -26,6 +26,8 @@ script:
   - bash Coverage_Function.sh
   - cd ..
 
+after_failure:
+  - echo "Because this is a Organization GIT"
 
 
 git:
